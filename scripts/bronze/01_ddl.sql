@@ -33,4 +33,4 @@ CREATE TABLE bronze.supermarketsales (
 	gross_margin_percentage FLOAT,
 	gross_income FLOAT,
 	rating FLOAT
-)
+);
