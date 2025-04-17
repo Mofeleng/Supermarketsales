@@ -12,7 +12,6 @@ Any other useful info:
 - The `date` column is explicitly cast to `DATE` (unlike the raw `NVARCHAR` in `bronze`) for improved querying and time-based analysis.
 - Matches cleaned data structure output after quality checks and transformation.
 --------------------------------------------------------------*/
-
 IF OBJECT_ID ('sales.supermarketsales', 'U') IS NOT NULL
 	DROP TABLE sales.supermarketsales;
 
@@ -25,7 +24,7 @@ CREATE TABLE sales.supermarketsales (
 	product_line NVARCHAR(50),
 	unit_price FLOAT,
 	quantity INT,
-	tax FLOAT,
+	tax_5_percent FLOAT,
 	total FLOAT,
 	date DATE,
 	time TIME,
@@ -35,4 +34,5 @@ CREATE TABLE sales.supermarketsales (
 	gross_income FLOAT,
 	rating FLOAT
 );
+
 
