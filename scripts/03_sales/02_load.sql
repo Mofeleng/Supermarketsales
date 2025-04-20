@@ -39,15 +39,15 @@ SELECT
 	customer_type,
 	gender,
 	product_line,
-	unit_price,
+	ROUND(unit_price, 2) AS unit_price,
 	quantity,
-	tax AS tax_5_percent,
-	total,
+	ROUND(tax, 2) AS tax_5_percent,
+	ROUND(total, 2) AS total,
 	CONVERT(DATE, date, 101) AS date,
 	time,
 	payment,
-	cogs,
-	gross_margin_percentage,
-	gross_income,
+	ROUND(cogs, 2) AS cogs,
+	ROUND(gross_margin_percentage, 2) AS gross_margin_percentage,
+	ROUND(gross_income, 2) AS gross_income,
 	rating
-FROM bronze.supermarketsales
+FROM bronze.supermarketsales;
