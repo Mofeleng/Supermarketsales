@@ -52,3 +52,62 @@ Once the clean table is set up, the next task is to **move the cleaned data from
 The final step in this stage is to populate the `sales.supermarketsales` table, making the data ready for **business intelligence and analytical queries**.
 
 ---
+Exploratory Data Analysis (EDA)
+With the cleaned and structured data now residing in the sales.supermarketsales table, exploratory data analysis was performed to uncover preliminary insights and validate the dataset’s suitability for business analysis.
+
+Dimensions Exploration
+The first step involved examining the key categorical dimensions:
+
+Branches and Cities: The dataset contains three branches (A, B, and C), each operating in a distinct city. This suggests city-based analysis will be meaningful for geographic segmentation.
+
+Customer Demographics: The fields customer_type, gender, and payment_method contained clean, expected values. These fields are useful for demographic and behavioral analysis.
+
+Product Lines: Six distinct product lines were identified. This dimension is well-suited for analyzing inventory distribution, sales trends, and customer preferences.
+
+Understanding these dimensions sets the foundation for grouping, filtering, and aggregating data in meaningful ways.
+
+Sales Date Range Analysis
+To determine the temporal scope of the dataset:
+
+The sales data spans from January 1, 2019 to March 30, 2019.
+
+Although the DATEDIFF(MONTH, ...) function returns 2, this is due to how it calculates complete month boundaries. The actual span is close to three full months.
+
+Establishing the date range is essential for performing any time-based analysis, including seasonal trends or forecasting.
+
+Sales Measures Summary
+Several key performance indicators were aggregated to understand overall business performance:
+
+Average Unit Price
+
+Total Quantity Sold
+
+Total VAT (5%)
+
+Total Revenue (inclusive of VAT)
+
+Total Cost of Goods Sold (COGS)
+
+Total Gross Income (Profit)
+
+Customer Ratings: minimum, average, and maximum
+
+These KPIs provide a high-level snapshot of the business and financial activity captured in the dataset.
+
+Sales Profit and Customer Satisfaction Breakdown
+Profit and customer satisfaction were analyzed across several dimensions:
+
+Gross Income:
+
+By branch
+
+By gender
+
+By customer type
+
+By product line
+
+Customer Ratings: Analyzed by branch to assess service quality and satisfaction
+
+An early insight from this analysis revealed a correlation between branch profitability and average customer rating. This raises the possibility that higher customer satisfaction may contribute to higher profits, or vice versa. However, further analysis is needed to determine causality.
+
